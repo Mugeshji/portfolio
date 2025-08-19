@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a; /* Premium deep black */
+  color: #fff; /* White text for contrast */
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  background-color: transparent; /* Prevents white blocks from appearing */
+}
+
+a {
+  color: #d4af37; /* Premium gold for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffd700; /* Lighter gold on hover */
+}
+
+/* Moving gradient background */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradientMove {
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* Floating gold particles */
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0.5; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.5; }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}
+
+/* Gold color styles */
+.bg-goldGlow {
+  background: radial-gradient(circle, rgba(255,215,0,1) 0%, rgba(184,134,11,1) 100%);
+}
+
+.text-goldText {
+  color: #FFD700;
+}
+body {
+  background-color: black;
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  overflow-x: hidden;
+}
+
+canvas {
+  pointer-events: auto; /* Allow clicking on floating tags */
+}
